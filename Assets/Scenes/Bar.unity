@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 113711120}
   - component: {fileID: 113711119}
   - component: {fileID: 113711118}
+  - component: {fileID: 113711122}
   - component: {fileID: 113711117}
   m_Layer: 6
   m_Name: Cat
@@ -276,12 +277,25 @@ Transform:
   m_GameObject: {fileID: 113711116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.54, y: -1.97, z: 0}
+  m_LocalPosition: {x: 4.54, y: 2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113711122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113711116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5950875ea714a5a9a4291114d02e08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 76034e7a8884c48559e533d64ccaa8d2, type: 3}
 --- !u!1001 &544528516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -442,11 +456,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1149167034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1143957541 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 377296166769353274, guid: dd17a3023c01c41d6a9e9a68890bf855, type: 3}
-  m_PrefabInstance: {fileID: 544528516}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1149167030
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +794,7 @@ PrefabInstance:
     - target: {fileID: 6683235256371422013, guid: a15dc6f45579144a4bc897067a25e175, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 1143957541}
+      objectReference: {fileID: 2077693185}
     - target: {fileID: 6683235256371422013, guid: a15dc6f45579144a4bc897067a25e175, type: 3}
       propertyPath: soundEffect
       value: 
@@ -937,6 +946,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940262933}
   m_CullTransparentMesh: 1
+--- !u!82 &2077693185 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5635554299789906707, guid: a15dc6f45579144a4bc897067a25e175, type: 3}
+  m_PrefabInstance: {fileID: 1519409771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2155586114301899848
 MonoBehaviour:
   m_ObjectHideFlags: 0

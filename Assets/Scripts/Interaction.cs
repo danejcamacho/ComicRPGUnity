@@ -32,6 +32,13 @@ public class Interaction : MonoBehaviour
                         inventory.inventory.Add(other.GetComponent<ItemHolder>().PickUpItem());
                     }
                 }
+
+                if(other.GetComponent<NPCSoundEffectHolder>() != null){
+                    if(other.GetComponent<NPCSoundEffectHolder>().clip != null){
+                        dialogueBox.soundEffect = other.GetComponent<NPCSoundEffectHolder>().clip;
+                    }
+                    
+                }
                 dialogueBox.StartDialogue(other.GetComponent<NPCDialogueHolder>().GetMyDialogue());
             }
         }

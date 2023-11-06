@@ -40,16 +40,21 @@ public class Dialogue : MonoBehaviour
 
     public void StartDialogue(string[] givenLines)
     {
-        if(soundEffect != null)
-            audioSource.PlayOneShot(soundEffect);
+        
+            
 
         if(!isTalking){
+            if(soundEffect != null){
+                audioSource.PlayOneShot(soundEffect);
+                soundEffect = null;
+            }
             textComponent.text = string.Empty;
             gameObject.SetActive(true);
             lines = givenLines;
             index = 0;
-            StartCoroutine(TypeLine());
             isTalking = true;
+            StartCoroutine(TypeLine());
+            
         }
         
     }
@@ -73,6 +78,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            soundEffect = null;
             isTalking = false;
             gameObject.SetActive(false);
         }
